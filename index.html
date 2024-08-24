@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Página não encontrada - BrPlay</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --radius: 0.5rem;
+
+      --background-color: #4cbae2;
+
+      --button-background: #17669f;
+      --button-background-hover: #1b83cc;
+      --button-color: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background-color: #1e1e1e;
+
+        --button-background: #111;
+        --button-background-hover: #161616;
+      }
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--background-color);
+      height: 100dvh;
+      width: 100dvw;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    div.container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      section.content {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        a {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          text-decoration: none;
+          color: var(--button-color);
+          background-color: var(--button-background);
+          padding: 10px;
+          border-radius: var(--radius);
+          width: fit-content;
+          transition: background-color 0.3s;
+          font-weight: 500;
+
+          &:hover {
+            background-color: var(--button-background-hover);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      div.container {
+        padding: 1rem;
+
+        section.content {
+          div.information {
+            div.left {
+              align-items: center;
+              text-align: center;
+            }
+
+            div.right {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <section class="content">
+      <a href="light.html" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-sun">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <span>Light</span>
+      </a>
+
+      <a href="dark.html" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-moon">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+        </svg>
+        <span>Dark</span>
+      </a>
+    </section>
+  </div>
+</body>
+
+</html>
